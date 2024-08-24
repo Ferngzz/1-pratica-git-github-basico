@@ -80,27 +80,26 @@ public class Main {
 
         return elementosRepetidos;
     }
-    
+
     public static void main(String[] args) {
 
         List<Integer> l1 = new ArrayList<>();
         List<Integer> l2 = new ArrayList<>();
+        Random geraNumeros = new Random();
 
-        l1.add(1);
-        l1.add(2);
-        l1.add(3);
-        l1.add(4);
-        l1.add(5);
-        l1.add(6);
+        int rangeRandom = 30;
+
+        for(int i = 0 ; i < 10; i++){
+            int numeroAleatorio = geraNumeros.nextInt(rangeRandom);
+            l1.add(numeroAleatorio);
+        }
 
         System.out.println("l1: " + l1);
 
-        l2.add(7);
-        l2.add(8);
-        l2.add(9);
-        l2.add(10);
-        l2.add(11);
-        l2.add(12);
+        for(int i = 0 ; i < 10; i++){
+            int numeroAleatorio = geraNumeros.nextInt(rangeRandom);
+            l2.add(numeroAleatorio);
+        }
 
         System.out.println("l2: " + l2);
         System.out.println("Union: " + union(l1,l2));
