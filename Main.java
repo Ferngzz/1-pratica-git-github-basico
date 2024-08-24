@@ -51,7 +51,22 @@ public class Main {
         }
         return false;
     }
-    
+
+    public int nroRepeat(){
+        List<Integer> elementosRepetidos = new ArrayList<>();
+        int cont = 0;
+
+        for(int i = 0 ; i < elementosRepetidos.size() ; i++){
+            for(int j = i + 1 ; j < elementosRepetidos.size() ; j++ ) {
+                if( i == j) {
+                    cont++;
+                }
+            }
+        }
+
+        return cont;   
+    }
+
     public static void main(String[] args) {
 
         List<Integer> l1 = new ArrayList<>();
