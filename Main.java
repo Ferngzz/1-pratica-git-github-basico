@@ -85,6 +85,9 @@ public class Main {
 
         List<Integer> l1 = new ArrayList<>();
         List<Integer> l2 = new ArrayList<>();
+
+        ArrayList<Integer> array1 = new ArrayList<Integer>();
+
         Random geraNumeros = new Random();
 
         int rangeRandom = 30;
@@ -92,6 +95,7 @@ public class Main {
         for(int i = 0 ; i < 10; i++){
             int numeroAleatorio = geraNumeros.nextInt(rangeRandom);
             l1.add(numeroAleatorio);
+            array1.add(numeroAleatorio);
         }
 
         System.out.println("l1: " + l1);
@@ -105,5 +109,9 @@ public class Main {
         System.out.println("Union: " + union(l1,l2));
         System.out.println("Intersect: " + intersect(l1,l2));
 
+        int numeroProcurar = 5;
+        System.out.println("Ocorrencias do numero " + numeroProcurar + " na lista = " + nOcorrencias(array1,numeroProcurar));
+
+        System.out.println("Array1 possui numeros repetidos = " + hasRepeat(array1));
     }
 }
