@@ -15,6 +15,20 @@ public class Main {
         return unionList;
     }
 
+    public static List<Integer> intersect(List<Integer> l1, List<Integer> l2){
+        List<Integer> intersectList = new ArrayList<>();
+
+        for (int i = 0; i < l1.size(); i++) {
+            for (int j = 0; j < l2.size(); j++) {
+                if (l1.get(i).equals(l2.get(j))){
+                    intersectList.add(l1.get(i));
+                    break;
+                }
+            }
+        }
+
+        return intersectList;
+    }
 
     public static void main(String[] args) {
 
@@ -30,15 +44,16 @@ public class Main {
 
         System.out.println("l1: " + l1);
 
-        l2.add(3);
-        l2.add(4);
-        l2.add(5);
-        l2.add(6);
         l2.add(7);
         l2.add(8);
+        l2.add(9);
+        l2.add(10);
+        l2.add(11);
+        l2.add(12);
 
         System.out.println("l2: " + l2);
         System.out.println("Union: " + union(l1,l2));
+        System.out.println("Intersect: " + intersect(l1,l2));
 
     }
 }
