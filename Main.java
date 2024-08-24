@@ -6,11 +6,16 @@ public class Main {
 
     public static List<Integer> union(List<Integer> l1, List<Integer> l2){
 
-        List<Integer> unionList = new ArrayList<>(l1);
+        List<Integer> unionList = new ArrayList<>();
 
-        for (int i = 0; i < l2.size(); i++){
-            if(!unionList.contains(l2.get(i))){
-                unionList.add(l2.get(i));
+        for (Integer i : l1) {
+            if (!unionList.contains(i)) {
+                unionList.add(i);
+            }
+        }
+        for (Integer i : l2) {
+            if (!unionList.contains(i)) {
+                unionList.add(i);
             }
         }
 
@@ -20,10 +25,10 @@ public class Main {
     public static List<Integer> intersect(List<Integer> l1, List<Integer> l2){
         List<Integer> intersectList = new ArrayList<>();
 
-        for (int i = 0; i < l1.size(); i++) {
-            for (int j = 0; j < l2.size(); j++) {
-                if (l1.get(i).equals(l2.get(j))){
-                    intersectList.add(l1.get(i));
+        for (Integer i : l1) {
+            for (Integer j : l2) {
+                if (i.equals(j) && !intersectList.contains(i)) {
+                    intersectList.add(i);
                     break;
                 }
             }
