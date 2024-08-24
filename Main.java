@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
+
 public class Main {
 
     public static List<Integer> union(List<Integer> l1, List<Integer> l2){
@@ -28,6 +30,17 @@ public class Main {
         }
 
         return intersectList;
+    }
+
+    public static int nOcorrencias(ArrayList<Integer> l, Integer el){
+        int ocorrencias = 0 ;
+        for( Integer element : l ){
+            if(element == el){
+                ocorrencias++;
+            }
+        }
+
+        return ocorrencias;
     }
 
     public static void main(String[] args) {
