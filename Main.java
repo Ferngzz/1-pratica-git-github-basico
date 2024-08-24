@@ -43,6 +43,15 @@ public class Main {
         return ocorrencias;
     }
 
+    public static boolean hasRepeat(ArrayList< Integer > l){
+        for(int i = 0; i < l.size() ; i++){
+            for(int j = i + 1 ; j < l.size() ; j++)
+                if(l.get(i) == l.get(j))
+                    return true;
+        }
+        return false;
+    }
+    
     public static void main(String[] args) {
 
         List<Integer> l1 = new ArrayList<>();
